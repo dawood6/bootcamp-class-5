@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import ValueContext from './ValueContext'
 
-const Child = () => {
+function Child() {
     let Value = useContext(ValueContext)
     let updateValue = Value[1]
     return (
