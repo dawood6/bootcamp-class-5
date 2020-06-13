@@ -3,11 +3,12 @@ import ValueContext from './ValueContext'
 
 const Child = () => {
     let Value = useContext(ValueContext)
+    let updateValue = Value[1]
     return (
         <div>
-            Child Number {Value}
+            Child Number {Value[0]}
             <br />
-            <button onClick={() => { Value[1](++Value[0]) }}>update value</button>
+            <button onClick={() => { updateValue(++Value[0]) }}>update value</button>
         </div>
     )
 }
